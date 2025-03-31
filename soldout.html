@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sold Out | Real Estate</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #d9534f;
+        }
+        button {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sold Out!</h1>
+        <p>Thank you for your interest. this properties has been sold. if you need  property in this same area contact the company agency so they notify you when theres available property in this area.</p>
+        <a href="contact.html" class="link-button">Contact agency now</a>
+        </form>
+    </div>
+    <script>
+        document.getElementById("notifyBtn").addEventListener("click", function() {
+            document.getElementById("notifyForm").classList.toggle("hidden");
+        });
+        
+        document.getElementById("notifyForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Thank you for subscribing! We will notify you about our next listings.");
+            document.getElementById("notifyForm").reset();
+            document.getElementById("notifyForm").classList.add("hidden");
+        });
+    </script>
+</body>
+</html>
