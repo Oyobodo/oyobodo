@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Marketing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Dream Home</h1>
+        <p>Find the best properties at the best prices</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are dedicated to helping you find the perfect property for your needs.</p>
+    </section>
+    <section id="properties">
+        <h2>Featured Properties</h2>
+        <div class="property-list">
+            <div class="property">
+                <img src="house1.jpg" alt="House 1">
+                <h3>Luxury Villa</h3>
+                <p>$500,000</p>
+                <button class="inquire-btn">Inquire</button>
+            </div>
+            <div class="property">
+                <img src="house2.jpg" alt="House 2">
+                <h3>Modern Apartment</h3>
+                <p>$300,000</p>
+                <button class="inquire-btn">Inquire</button>
+            </div>
+            <div class="property">
+                <img src="house2.jpg" alt="House 2">
+                <h3>Modern Apartment</h3>
+                <p>$300,000</p>
+                <button class="inquire-btn">Inquire</button>
+            </div>
+            <div class="property">
+                <img src="house2.jpg" alt="House 2">
+                <h3>Modern Apartment</h3>
+                <p>$300,000</p>
+                <button class="inquire-btn">Inquire</button>
+            </div>
+            <div class="property">
+                <img src="house2.jpg" alt="House 2">
+                <h3>Modern Apartment</h3>
+                <p>$300,000</p>
+                <button class="inquire-btn">Inquire</button>
+            </div>
+        </div>
+   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background: #495057;
+            padding: 10px;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .property-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .property {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .property img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .inquire-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .inquire-btn:hover {
+            background: #218838;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        input, textarea, button {
+            margin-top: 10px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll(".inquire-btn").forEach(button => {
+                button.addEventListener("click", () => {
+                    alert("Thank you for your interest! We will contact you soon.");
+                });
+            });
+
+            document.getElementById("contact-form").addEventListener("submit", (event) => {
+                event.preventDefault();
+            });
+        });
+    </script>
+</body>
+</html>
