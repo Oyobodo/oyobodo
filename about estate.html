@@ -1,119 +1,222 @@
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate Rules and Regulations</title>
-    <script src="npr1.js"defer></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
-        h2 {
-            margin-bottom: 2em;
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-        }
-        p {
-            margin: 15px 0;
-        }
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .footer a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #f8f9fa;
-            font-weight: bold;
-        }
-        .footer a:hover {
-            color: #007bff;
-        }
-        .social-links {
-            margin-top: 10px;
-        }
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-            color: #f8f9fa;
-            font-size: 18px;
-        }
-        .social-links a:hover {
-            color: #007bff;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Real Estate Rules and Regulations</title>
+  <script src="npr1.js" defer></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: #343a40;
+      color: #fff;
+      padding: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-logo {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 1.5em;
+    }
+
+    nav ul li a {
+      color: #f8f9fa;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      color: #007bff;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: #343a40;
+        width: 100%;
+        margin-top: 1em;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    h2 {
+      margin-bottom: 2em;
+      color: #007bff;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+
+    p {
+      margin: 15px 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: 80px auto 60px;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .footer {
+      background-color: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+    }
+
+    .footer a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #f8f9fa;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      color: #007bff;
+    }
+
+    .social-links {
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #f8f9fa;
+      font-size: 18px;
+    }
+
+    .social-links a:hover {
+      color: #007bff;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="container">
-        <h2>Introduction</h2>
-        <p>Real estate transactions are governed by various laws and regulations to ensure fairness, transparency, and legal compliance. Understanding these rules helps protect buyers, sellers, investors, and real estate professionals. Below are the key legal frameworks guiding real estate transactions.</p>
 
-        <h2>Property Ownership Laws</h2>
-        <p>Property ownership laws define who can own real estate and under what conditions. Laws vary depending on the country or state, but they generally outline freehold and leasehold property rights. Zoning laws dictate how properties can be used (residential, commercial, industrial, etc.).</p>
-
-        <h2>Real Estate Contract Laws</h2>
-        <p>A legally binding contract must exist between buyers and sellers, including terms such as price, payment schedule, and contingencies. The contract must comply with the Statute of Frauds, which requires real estate agreements to be in writing. Breach of contract can result in penalties, cancellation, or legal action.</p>
-
-        <h2>Land Use and Zoning Regulations</h2>
-        <p>Zoning regulations control the type and use of properties in different areas. Land use laws restrict or permit certain developments to preserve urban planning and environmental sustainability. Homeowners' associations (HOAs) may also impose additional property use restrictions.</p>
-
-        <h2>Real Estate Financing and Mortgage Laws</h2>
-        <p>Mortgage laws regulate lending practices to protect borrowers and lenders. Truth in Lending Act (TILA) ensures transparency in loan agreements and disclosure of interest rates and fees. Foreclosure laws govern lender rights in case of loan default.</p>
-
-        <h2>Tenant and Landlord Laws</h2>
-        <p>Lease agreements outline tenant and landlord rights and responsibilities. Eviction laws protect tenants from wrongful eviction and set guidelines for legal removal. Rent control regulations may apply in some areas to prevent excessive rent increases.</p>
-
-        <h2>Fair Housing and Anti-Discrimination Laws</h2>
-        <p>The Fair Housing Act prohibits discrimination based on race, color, religion, gender, disability, familial status, or national origin. Equal Credit Opportunity Act (ECOA) ensures fair lending practices. Real estate agents must comply with ethical guidelines to prevent discriminatory practices.</p>
-
-        <h2>Environmental and Safety Regulations</h2>
-        <p>Environmental laws regulate hazardous material disclosures, such as lead-based paint and asbestos. Building codes ensure structural safety, fire prevention, and energy efficiency. Compliance with flood zone and disaster-prone area regulations is essential.</p>
-
-        <h2>Real Estate Licensing and Professional Standards</h2>
-        <p>Real estate agents and brokers must obtain proper licensing. Ethical guidelines and continuing education requirements apply to professionals in the field. Unlicensed practice of real estate may result in legal penalties.</p>
-
-        <h2>Taxation and Real Estate</h2>
-        <p>Property taxes are levied on real estate by local governments. Capital gains tax applies to profits made from selling real estate. Tax incentives may be available for first-time homebuyers, historic preservation, and energy-efficient improvements.</p>
-
-        <h2>Dispute Resolution in Real Estate</h2>
-        <p>Mediation, arbitration, and litigation are options for resolving real estate disputes. Title disputes can arise from unclear ownership records and must be legally resolved. Boundary disputes may require legal intervention or surveying for settlement.</p>
+  <!-- Navbar -->
+  <nav>
+    <div class="nav-container">
+      <div class="nav-logo">RealEstatePro</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="properties.html">Properties</a></li>
+        <li><a href="marketing.html">marketing agency</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h2>Introduction</h2>
+    <p>Real estate transactions are governed by various laws and regulations to ensure fairness, transparency, and legal compliance. Understanding these rules helps protect buyers, sellers, investors, and real estate professionals. Below are the key legal frameworks guiding real estate transactions.</p>
+
+    <h2>Property Ownership Laws</h2>
+    <p>Property ownership laws define who can own real estate and under what conditions. Laws vary depending on the country or state, but they generally outline freehold and leasehold property rights. Zoning laws dictate how properties can be used (residential, commercial, industrial, etc.).</p>
+
+    <h2>Real Estate Contract Laws</h2>
+    <p>A legally binding contract must exist between buyers and sellers, including terms such as price, payment schedule, and contingencies. The contract must comply with the Statute of Frauds, which requires real estate agreements to be in writing. Breach of contract can result in penalties, cancellation, or legal action.</p>
+
+    <h2>Land Use and Zoning Regulations</h2>
+    <p>Zoning regulations control the type and use of properties in different areas. Land use laws restrict or permit certain developments to preserve urban planning and environmental sustainability. Homeowners' associations (HOAs) may also impose additional property use restrictions.</p>
+
+    <h2>Real Estate Financing and Mortgage Laws</h2>
+    <p>Mortgage laws regulate lending practices to protect borrowers and lenders. Truth in Lending Act (TILA) ensures transparency in loan agreements and disclosure of interest rates and fees. Foreclosure laws govern lender rights in case of loan default.</p>
+
+    <h2>Tenant and Landlord Laws</h2>
+    <p>Lease agreements outline tenant and landlord rights and responsibilities. Eviction laws protect tenants from wrongful eviction and set guidelines for legal removal. Rent control regulations may apply in some areas to prevent excessive rent increases.</p>
+
+    <h2>Fair Housing and Anti-Discrimination Laws</h2>
+    <p>The Fair Housing Act prohibits discrimination based on race, color, religion, gender, disability, familial status, or national origin. Equal Credit Opportunity Act (ECOA) ensures fair lending practices. Real estate agents must comply with ethical guidelines to prevent discriminatory practices.</p>
+
+    <h2>Environmental and Safety Regulations</h2>
+    <p>Environmental laws regulate hazardous material disclosures, such as lead-based paint and asbestos. Building codes ensure structural safety, fire prevention, and energy efficiency. Compliance with flood zone and disaster-prone area regulations is essential.</p>
+
+    <h2>Real Estate Licensing and Professional Standards</h2>
+    <p>Real estate agents and brokers must obtain proper licensing. Ethical guidelines and continuing education requirements apply to professionals in the field. Unlicensed practice of real estate may result in legal penalties.</p>
+
+    <h2>Taxation and Real Estate</h2>
+    <p>Property taxes are levied on real estate by local governments. Capital gains tax applies to profits made from selling real estate. Tax incentives may be available for first-time homebuyers, historic preservation, and energy-efficient improvements.</p>
+
+    <h2>Dispute Resolution in Real Estate</h2>
+    <p>Mediation, arbitration, and litigation are options for resolving real estate disputes. Title disputes can arise from unclear ownership records and must be legally resolved. Boundary disputes may require legal intervention or surveying for settlement.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    &copy; 2025 RealEstatePro | 
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms</a>
+   
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
 </body>
 </html>

@@ -9,56 +9,99 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            margin: 0;
+            padding: 0;
             background-color: #f8f8f8;
         }
+
+        .navbar {
+            background-color: #343a40;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
         .container {
             text-align: center;
             background: white;
-            padding: 20px;
+            padding: 30px;
+            margin: 80px auto;
             border-radius: 10px;
+            max-width: 600px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         h1 {
             color: #d9534f;
         }
-        button {
+
+        button, .link-button {
             background-color: #5cb85c;
             color: white;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 15px;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 5px;
         }
-        button:hover {
+
+        button:hover, .link-button:hover {
             background-color: #4cae4c;
         }
+
         .hidden {
             display: none;
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="logo">Real Estate Co.</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="properties.html">Properties</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
     <div class="container">
         <h1>Sold Out!</h1>
-        <p>Thank you for your interest. this properties has been sold. if you need  property in this same area contact the company agency so they notify you when there's available property in this area.</p>
-        <a href="contact.html" class="link-button">Contact agency now</a>
-        </form>
+        <p>Thank you for your interest. This property has been sold. If you need a property in this same area, contact our agency so we can notify you when another becomes available.</p>
+        <a href="contact.html" class="link-button">Contact Agency Now</a>
     </div>
+
     <script>
-        document.getElementById("notifyBtn").addEventListener("click", function() {
-            document.getElementById("notifyForm").classList.toggle("hidden");
-        });
-        
-        document.getElementById("notifyForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            alert("Thank you for subscribing! We will notify you about our next listings.");
-            document.getElementById("notifyForm").reset();
-            document.getElementById("notifyForm").classList.add("hidden");
-        });
+        const notifyBtn = document.getElementById("notifyBtn");
+        const notifyForm = document.getElementById("notifyForm");
+
+        if (notifyBtn && notifyForm) {
+            notifyBtn.addEventListener("click", function () {
+                notifyForm.classList.toggle("hidden");
+            });
+
+            notifyForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert("Thank you for subscribing! We will notify you about our next listings.");
+                notifyForm.reset();
+                notifyForm.classList.add("hidden");
+            });
+        }
     </script>
 </body>
 </html>

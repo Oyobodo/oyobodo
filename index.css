@@ -1,0 +1,160 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef1f7;
+}
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+header {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 1.5rem;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+nav ul li {
+    margin: 0 0px;
+    padding: 0px 0;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #6e8efb;
+}
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.dark-mode {
+    background-color: #1e1e2e;
+    color: white;
+}
+.dark-mode .card {
+    background: #2a2a3b;
+    color: white;
+}
+.dark-mode nav {
+    background: #333;
+}
+.dark-mode-toggle {
+    margin: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #6e8efb;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #eef1f7;
+}
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background: #444;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    transition: width 0.3s ease;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    display: block;
+    transition: background 0.3s;
+}
+.sidebar ul li a:hover {
+    background: #6e8efb;
+}
+.sidebar-toggle {
+    background: #6e8efb;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 260px;
+    font-size: 18px;
+    transition: left 0.3s ease;
+}
+.dashboard {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease;
+}
+.collapsed .sidebar {
+    width: 60px;
+}
+.collapsed .sidebar ul li a {
+    font-size: 0;
+}
+.collapsed .sidebar-toggle {
+    left: 70px;
+}
+.collapsed .dashboard {
+    margin-left: 60px;
+    width: calc(100% - 60px);
+}

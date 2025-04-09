@@ -6,6 +6,9 @@
     <title>Sales Page</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -17,6 +20,24 @@
             background-color: #ff5733;
             color: white;
             padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            display: inline-block;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #ff5733;
+        }
+        section {
+            padding: 40px 0;
         }
         .product {
             background: white;
@@ -53,68 +74,59 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>our investment team properties</h1>
-        <p>BE AMONG OUR investment TEAM TODAY AND START GROWING WEALTH FOR MORE BETTER FUTURE .</p>
+    <header id="home">
+        <h1>Our Investment Team Properties</h1>
+        <p>Be among our investment team today and start growing wealth for a better future.</p>
     </header>
-    
-    <section class="product">
-        <img src="product.jpg" alt="Product Image">
-        <h2>Amazing Product</h2>
-        <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
-        <p class="price">Only $49.99!</p>
-        <button class="buy-now">Buy Now</button>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about estate.html">About real state</a>
+        <a href="investment.html">invest now</a>
+        <a href="contact.html">Contact us</a>
+    </nav>
+
+    <section id="about">
+        <h2>let's grow wealth together</h2>
+        <p>We are dedicated to helping you grow your wealth through smart property investments. Join us today and be part of a thriving team of successful investors.</p>
     </section>
-    <section class="product">
-        <img src="product.jpg" alt="Product Image">
-        <h2>Amazing Product</h2>
-        <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
-        <p class="price">Only $49.99!</p>
-        <button class="buy-now">Buy Now</button>
+
+    <section id="properties">
+        <h2>Our Properties</h2>
+        <!-- Repeat products -->
+        <div class="product">
+            <img src="product.jpg" alt="Product Image">
+            <h3>Amazing Product</h3>
+            <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
+            <p class="price">Only $49.99!</p>
+        </div>
+
+        <div class="product">
+            <img src="product.jpg" alt="Product Image">
+            <h3>Amazing Product</h3>
+            <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
+            <p class="price">Only $49.99!</p>
+        </div>
+
+        <!-- Add more products as needed -->
     </section>
-    <section class="product">
-        <img src="product.jpg" alt="Product Image">
-        <h2>Amazing Product</h2>
-        <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
-        <p class="price">Only $49.99!</p>
-        <button class="buy-now">Buy Now</button>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions? Reach out to us at <strong>info@investmentteam.com</strong>.</p>
     </section>
-    <section class="product">
-        <img src="product.jpg" alt="Product Image">
-        <h2>Amazing Product</h2>
-        <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
-        <p class="price">Only $49.99!</p>
-        <button class="buy-now">Buy Now</button>
-    </section>
-    
-    <section class="product">
-        <img src="product.jpg" alt="Product Image">
-        <h2>Amazing Product</h2>
-        <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
-        <p class="price">Only $49.99!</p>
-        <button class="buy-now">Buy Now</button>
-    </section>
-    
-    <section class="product">
-        <img src="product.jpg" alt="Product Image">
-        <h2>Amazing Product</h2>
-        <p class="description">This is the best product you will ever buy. It has amazing features and benefits that will make your life easier.</p>
-        <p class="price">Only $49.99!</p>
-        <button class="buy-now">Buy Now</button>
-    </section>
-    
-    
+
     <footer>
-        <p>&copy; 20 Your Company. All rights reserved.</p>
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
     </footer>
 
-     <script>
-    // Select all buttons with class 'buy-now' and add click event listeners
-    document.querySelectorAll(".buy-now").forEach(button => {
-        button.addEventListener("click", function() {
-            window.location.href = "payment.html"; // Change to your target URL
+    <script>
+        // Optional: if you add Buy Now buttons, handle their click
+        document.querySelectorAll(".buy-now").forEach(button => {
+            button.addEventListener("click", function() {
+                window.location.href = "payment.html";
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>

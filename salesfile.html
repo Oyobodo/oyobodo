@@ -18,6 +18,21 @@
             color: white;
             padding: 20px;
         }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
         .product {
             background: white;
             padding: 20px;
@@ -57,7 +72,16 @@
         <h1>Exclusive Product Offer!</h1>
         <p>Get it now before the deal expires!</p>
     </header>
+
+    <!-- Navigation bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="properties.html">Properties</a>
+        <a href="about estate.html">About real estate</a>
+        <a href="contact.html">Contact us now</a>
+    </nav>
     
+    <!-- Products -->
     <section class="product">
         <img src="product.jpg" alt="Product Image">
         <h2>Amazing Product</h2>
@@ -86,7 +110,6 @@
         <p class="price">Only $49.99!</p>
         <button class="buy-now">Buy Now</button>
     </section>
-    
     <section class="product">
         <img src="product.jpg" alt="Product Image">
         <h2>Amazing Product</h2>
@@ -94,7 +117,6 @@
         <p class="price">Only $49.99!</p>
         <button class="buy-now">Buy Now</button>
     </section>
-    
     <section class="product">
         <img src="product.jpg" alt="Product Image">
         <h2>Amazing Product</h2>
@@ -102,19 +124,18 @@
         <p class="price">Only $49.99!</p>
         <button class="buy-now">Buy Now</button>
     </section>
-    
     
     <footer>
         <p>&copy; 20 Your Company. All rights reserved.</p>
     </footer>
 
-     <script>
-    // Select all buttons with class 'buy-now' and add click event listeners
-    document.querySelectorAll(".buy-now").forEach(button => {
-        button.addEventListener("click", function() {
-            window.location.href = "payment.html"; // Change to your target URL
+    <script>
+        // Select all buttons with class 'buy-now' and add click event listeners
+        document.querySelectorAll(".buy-now").forEach(button => {
+            button.addEventListener("click", function() {
+                window.location.href = "payment.html"; // Change to your target URL
+            });
         });
-    });
-</script>
+    </script>
 </body>
 </html>

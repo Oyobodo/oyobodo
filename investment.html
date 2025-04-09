@@ -7,12 +7,30 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 40px;
+            margin: 0;
             background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #007bff;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
         }
         .container {
             background: white;
             padding: 20px;
+            margin: 40px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -26,7 +44,7 @@
             font-weight: bold;
             color: #007bff;
         }
-        button {
+        button, .invest-link {
             background-color: #007bff;
             color: white;
             border: none;
@@ -34,13 +52,25 @@
             cursor: pointer;
             margin-top: 10px;
             border-radius: 5px;
+            display: inline-block;
+            text-decoration: none;
         }
-        button:hover {
+        button:hover, .invest-link:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 <body>
+    <div class="navbar">
+        <div class="logo"><strong>Real Estate Guide</strong></div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about estate.html">About</a>
+            <a href="investmentteam.html">Invest</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
     <div class="container">
         <h1>Understanding How Real Estate Investment Works</h1>
         <p>Real estate investment involves purchasing, owning, managing, renting, or selling real estate for profit. Here’s a simple breakdown of how it works:</p>
@@ -71,8 +101,8 @@
             <li><span class="highlight">Leverage:</span> Financing helps increase returns.</li>
             <li><span class="highlight">Tax Benefits:</span> Mortgage interest, depreciation, and property expenses are deductible.</li>
         </ul>
-        <li><span class="highlight">click:</span> on the invest now button below to start your real estate investment journey </li>
-        <a href="contact.html"> Invest now</a>
+        <p><span class="highlight">Click:</span> on the invest now button below to start your real estate investment journey.</p>
+        <a href="properties.html" class="invest-link">Invest Now</a>
     </div>
 </body>
 </html>

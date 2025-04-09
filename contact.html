@@ -1,93 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real Estate - Social Links</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .container {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-            max-width: 450px;
-            margin: auto;
-            animation: fadeIn 1s ease-in-out;
-        }
-        .logo {
-            width: 120px;
-            margin-bottom: 15px;
-        }
-        h1 {
-            color: #333;
-        }
-        .social-links {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .link {
-            text-decoration: none;
-            background: #0073e6;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            transition: 0.3s;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-        }
-        .link:hover {
-            background: #005bb5;
-            transform: scale(1.05);
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> real estate company </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #0073e6;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .logo-text {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #ffdd57;
+    }
+
+    /* Main Container */
+    .container {
+      background: #fff;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 1rem;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: #0073e6;
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .link:hover {
+      background: #005bb5;
+      transform: translateY(-2px);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 30px 20px;
+        padding: 30px 20px;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <img src="logo.png" alt="Real Estate Logo" class="logo">
-        <h1>Welcome to Our Real Estate Company</h1>
-        <p>contact us on any of the social media below to seal the business deal after you have made your payment, and for more information.</p>
-        
-        <div class="social-links">
-            <a href="#" class="link" id="facebook"> Facebook</a>
-            <a href="#" class="link" id="twitter"> Twitter</a>
-            <a href="#" class="link" id="instagram"> Instagram</a>
-            <a href="#" class="link" id="linkedin">LinkedIn</a>
-            <a href="#" class="link" id="whatsapp">whatsapp</a>
-            <a href="#" class="link" id="telegram">telegram</a>
-            <a href="#" class="link" id="gmail">gmail</a>
-        </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo-text">real estate company</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about estate.html">About real estate</a></li>
+      <li><a href="properties.html">properties</a></li>
+      <li><a href="payment.html">payment</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+    <img src="logo.png" alt="real estate Logo" class="logo" />
+    <h1>Welcome to Our real estate</h1>
+    <p>Contact us on any of the social media platforms below for more information.</p>
+
+    <div class="social-links">
+      <a href="#" class="link" id="facebook"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#" class="link" id="twitter"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#" class="link" id="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="#" class="link" id="linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href=" https://wa.me/2348082498708" class="link" id="whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+
+      <a href="#" class="link" id="telegram"><i class="fab fa-telegram"></i> Telegram</a>
+      <a href="#" class="link" id="gmail"><i class="fas fa-envelope"></i> Gmail</a>
     </div>
-    
-    <script>
-        document.querySelectorAll('.link').forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                let socialMediaUrls = {
-                    facebook: 'https://www.facebook.com',
-                    twitter: 'https://www.twitter.com',
-                    instagram: 'https://www.instagram.com',
-                    linkedin: 'https://www.linkedin.com'
-                };
-                window.open(socialMediaUrls[this.id], '_blank');
-            });
-        });
-    </script>
+  </div>
+
+  <script>
+    const socialMediaUrls = {
+      facebook: 'https://www.facebook.com/yourpage',
+      twitter: 'https://www.twitter.com/yourhandle',
+      instagram: 'https://www.instagram.com/yourprofile',
+      linkedin: 'https://www.linkedin.com/in/yourprofile',
+      whatsapp: 'https://wa.me/2348082498708',
+      telegram: 'https://t.me/yourtelegramusername',
+      gmail: 'mailto:youremail@gmail.com'
+    };
+
+    document.querySelectorAll('.link').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const url = socialMediaUrls[this.id];
+        if (url) window.open(url, '_blank');
+      });
+    });
+  </script>
+
 </body>
 </html>

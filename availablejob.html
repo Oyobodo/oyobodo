@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Careers - Real Estate Co.</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #3b82f6;
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .job-card {
+      transition: all 0.3s ease;
+    }
+
+    .job-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .section-container {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md py-4 px-8 flex justify-between items-center">
+    <a href="#" class="text-2xl font-bold text-blue-600">RealEstateCo</a>
+    <ul class="flex space-x-6">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="about estate.html" class="nav-link">About Estate</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+      <li><a href="investment.html" class="text-blue-600 font-semibold nav-link">Investment Platform</a></li>
+    </ul>
+  </nav>
+
+  <!-- Careers Section -->
+  <section class="max-w-6xl mx-auto mt-12 p-6 bg-white rounded-xl shadow-lg section-container">
+    <h1 class="text-3xl font-bold mb-4 text-blue-700">Join Our Team</h1>
+    <p class="mb-8 text-gray-600">We're growing and looking for passionate individuals to join our real estate family. Explore the available positions below and apply today!</p>
+
+    <!-- Job Listings Grid -->
+    <div class="grid gap-6 md:grid-cols-2">
+      <!-- Job Cards -->
+      <div class="border-l-4 border-blue-500 pl-4 bg-gray-50 p-4 rounded-md job-card">
+        <h2 class="text-xl font-semibold">Real Estate Agent</h2>
+        <p class="text-gray-700">We are looking for licensed agents with at least 1 year of experience. Strong communication skills and knowledge of the local market required.</p>
+        <p class="mt-1 text-sm text-gray-500">Location: New York, NY</p>
+      </div>
+
+      <div class="border-l-4 border-blue-500 pl-4 bg-gray-50 p-4 rounded-md job-card">
+        <h2 class="text-xl font-semibold">Marketing Coordinator</h2>
+        <p class="text-gray-700">Help us spread the word! Seeking creative minds for social media and property marketing campaigns.</p>
+        <p class="mt-1 text-sm text-gray-500">Location: Remote</p>
+      </div>
+
+      <div class="border-l-4 border-blue-500 pl-4 bg-gray-50 p-4 rounded-md job-card">
+        <h2 class="text-xl font-semibold">Customer Support Specialist</h2>
+        <p class="text-gray-700">Provide top-notch support to our clients. Must be friendly, organized, and detail-oriented.</p>
+        <p class="mt-1 text-sm text-gray-500">Location: Miami, FL</p>
+      </div>
+
+      <div class="border-l-4 border-blue-500 pl-4 bg-gray-50 p-4 rounded-md job-card">
+        <h2 class="text-xl font-semibold">Cleaning Specialist</h2>
+        <p class="text-gray-700">Help keep our properties sparkling! Responsible for general property maintenance and cleanliness.</p>
+        <p class="mt-1 text-sm text-gray-500">Location: Miami, FL</p>
+      </div>
+
+      <div class="border-l-4 border-blue-500 pl-4 bg-gray-50 p-4 rounded-md job-card">
+        <h2 class="text-xl font-semibold">Truck Driver</h2>
+        <p class="text-gray-700">Assist with transporting materials and property items. Valid license and safe driving record required.</p>
+        <p class="mt-1 text-sm text-gray-500">Location: Miami, FL</p>
+      </div>
+
+      <div class="border-l-4 border-blue-500 pl-4 bg-gray-50 p-4 rounded-md job-card">
+        <h2 class="text-xl font-semibold">Assistant Secretary</h2>
+        <p class="text-gray-700">Provide administrative support, manage scheduling, and assist with communication tasks in our Miami office.</p>
+        <p class="mt-1 text-sm text-gray-500">Location: Miami, FL</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-10 text-center">
+      <a href="/apply" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition font-medium">Apply Now</a>
+    </div>
+  </section>
+</body>
+</html>

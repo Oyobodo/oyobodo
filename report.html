@@ -14,26 +14,33 @@
             padding: 0;
             background-color: #f5f5f5;
             text-align: center;
-            gap: 30;
         }
         header {
             background: #0073e6;
             color: white;
-            padding: 20px;
-            text-align: center;
+            padding: 20px 0;
+        }
+        nav {
+            background: #005bb5;
+            padding: 10px 0;
         }
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
         nav ul li {
             display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
         nav ul li a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 16px;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
         }
         .client-form, .testimonials {
             background: white;
@@ -78,13 +85,18 @@
 <body>
     <header>
         <h1>Our Valued Clients</h1>
-        <nav>
-            <ul>
-                <li><a href="#testimonials">Testimonials</a></li>
-            </ul>
-        </nav>
     </header>
-    
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about estate.html">About Us</a></li>
+            <li><a href="service.html">our Services</a></li>
+            <li><a href="properties.html">properties</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </nav>
+
     <section class="testimonials" id="testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonial">
@@ -95,50 +107,19 @@
             <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
             <strong>- John Smith</strong>
         </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
-        <div class="testimonial">
-            <p><i class="fas fa-quote-left"></i> Professional and efficient. Highly recommend! <i class="fas fa-quote-right"></i></p>
-            <strong>- John Smith</strong>
-        </div>
+        <!-- Repeated testimonials could be removed or made unique -->
         <div class="testimonial">
             <p><i class="fas fa-quote-left"></i> Smooth process and great communication. <i class="fas fa-quote-right"></i></p>
             <strong>- Sarah Lee</strong>
         </div>
     </section>
-    
+
     <footer>
-        <p>&copy; 2005Real Estate Company. All Rights Reserved.</p>
+        <p>&copy; Thank you all for your good and nice comments. We are known for great service, and we promise to continue giving you the best.</p>
     </footer>
-    
+
     <script>
-        document.getElementById("clientForm").addEventListener("submit", function(event) {
+        document.getElementById("clientForm")?.addEventListener("submit", function(event) {
             event.preventDefault();
             let name = document.getElementById("name").value;
             let email = document.getElementById("email").value;
